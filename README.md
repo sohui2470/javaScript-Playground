@@ -1,2 +1,2 @@
-# javaScript-Playground
+# javaScript_Playground
 learning javaScript
