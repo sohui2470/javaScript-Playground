@@ -1,0 +1,40 @@
+<html>
+<!-- <link rel=stylesheet href="c:\css\my.css"> -->
+<title>구구단</title>
+
+<head>
+    <h1>구구단</h1>
+
+</head>
+
+<body>
+    <input type="text" id="num"></input>단을 출력합니다.
+    <button onclick="display()">확인</button>
+    <script>
+       function display(){
+           var i = document.getElementById('num').value;
+            if (i === 0) {
+                for (var i = 1; i <= 9; i++) {
+                    document.write("<br><h3>" + i + "단을 출력합니다.</h3>");
+                    console.log(i + "단을 출력합니다.");
+                    for (var j = 1; j <= 9; j++) {
+                        console.log(i + "*" + j + "=" + (i * j));
+                        document.write("<br>" + i + "*" + j + "=" + (i * j));
+
+                    }
+                }
+            } else {
+                document.write("<br><h3>" + i + "단을 출력합니다.</h3>");
+                for (var j = 1; j <= 9; j++) {
+                    console.log(i + "*" + j + "=" + (i * j));
+                    document.write("<br>" + i + "*" + j + "=" + (i * j));
+
+                }
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
