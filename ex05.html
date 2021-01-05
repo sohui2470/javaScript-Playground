@@ -1,0 +1,55 @@
+<html>
+<title>소수 판별 프로그램</title>
+
+<head>
+</head>
+
+<body>
+    <script>
+
+        // 내 풀이
+        // document.write("<h4>사용자가 입력한 숫자가 소수인지 아닌지 알려주는 프로그램을 작성해 봅시다.</h4>");
+        // var input = Number(prompt("숫자를 입력하세요."));
+        // // console.log(input);
+        // var count = 0;
+        // for (var num = 1; num <= input; num++) {
+        //     // console.log(num, input);
+        //     var remainder = (input % num);
+        //     // console.log("나머지: " + remainder);
+        //     if (remainder === 0) {
+        //         count++;
+        //     }
+        //     // console.log("현재까지 약수의 개수: " + count);
+        // }
+
+        // if (count === 2) {
+        //     // alert(input+"은 소수입니다.");
+        //     document.write(input+"은 소수입니다.");
+        // } else {
+        //     // alert(input+"은 약수가 " + count + "개이므로 소수가 아닙니다.");
+        //     document.write(input+"은 약수가 " + count + "개이므로 소수가 아닙니다.");
+        // }
+
+        // 강의 선생님 풀이------------------------------------------------------------------------------------------
+        var isPrime = true;
+        var n = Number(prompt("2 이상의 정수를 입력해 주세요."));
+        for (var i = 2; i < n; i++) {
+            if (n % i === 0) {
+                isPrime = false;
+                break;
+            }
+            console.log(isPrime,i);
+        }
+
+        if (isPrime) {
+            document.write(n + "는 소수입니다.");
+        } else {
+            document.write(n + "는 소수가 아닙니다.");
+        }
+        //맨 앞(1), 맨 끝(n) 사이의 수들만 생각해서 하나라도 isPrime = false;
+        //로 만들면 바로 break로 불필요한 계산 없이도 소수가 아닌 걸 간파할 수 있다.
+    </script>
+
+</body>
+
+</html>

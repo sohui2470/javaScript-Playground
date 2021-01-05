@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<title>연습문제3</title>
+
+<head>
+    반복문(loop) 예제
+</head>
+
+<body>
+    <script>
+        document.write("<br>01. while 문을 사용해서 1부터 100까지의 합을 구해 봅시다.");
+        var i = 1;
+        var a = 0;
+        while (i <= 100) {
+            a = a + i;
+            i++;
+            console.log(a);
+        }
+        alert("1부터 100까지 자연수의 합은 "+a+"입니다.");        
+        
+        document.write("<br>02. for 문을 사용해서 1부터 100까지의 합을 구해 봅시다.");
+        var b = 0;
+        for(var i=0;i<=100;i++){
+            b= b+i;
+            console.log(i,b);
+        }
+        alert("1부터 100까지 자연수의 합은 "+b+"입니다.");
+    </script>>
+</body>
+
+</html>
