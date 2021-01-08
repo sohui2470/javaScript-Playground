@@ -1,0 +1,56 @@
+<html>
+<link rel=stylesheet href="c:\css\my.css">
+<title>소수 출력 프로그램</title>
+
+<head></head>
+
+<body>
+    <div id="result"></div>
+
+    <script>
+        numbers = new Object();
+        numbers.all = new Array();
+        numbers.prime = new Array();
+
+        numbers.isPrime = function (number) {
+            for (var x = 2; x < number; x++) {
+                if (number % x === 0) {
+                    return false;
+                }
+            }
+            return true;
+        };
+
+        numbers.addAll = function (max_num) {
+            for (var y = 1; y <= max_num; y++) {
+                this.all.push(y);
+            }
+        };
+
+        numbers.addPrime = function () {
+            for (var z = 1; z < this.all.length; z++) {
+                var n =  this.all[z];
+                if(this.isPrime(n)){
+                    this.prime.push(n);
+                }
+            }
+        };
+
+
+        numbers.getAllPrime = function () {
+            var ret = "";
+            ret += "<h2>소수는 " + this.prime.length + "개입니다.</h2>\n";
+            for (var i = 0; i < this.prime.length; i++) {
+                ret += (i + 1) + "번째 소수: " + this.prime[i] + "<br>\n";
+            }
+            return ret;
+        };
+
+        numbers.addAll(10000);
+        numbers.addPrime();
+        document.getElementById('result').innerHTML = numbers.getAllPrime();
+
+    </script>
+</body>
+
+</html>
